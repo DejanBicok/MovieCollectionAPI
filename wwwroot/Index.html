@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="JavaScript.js"></script>
+    <title>Movie Collection Dashboard</title>
+</head>
+<body>
+    <div>
+        <div class="toolbar">
+            <a href="Authorization/register.html" class="t-btn">Register</a>
+            <a href="Authorization/login.html" class="t-btn">Log In</a>
+            <a href="Authorization/authorize.html" class="t-btn">Authorize</a>
+            <!--<button class="log" type="submit" name="login">Log in</button>
+        <button class="auth" type="submit" name="authorize">Authorize</button>-->
+        </div>
+
+        <div class="menu">
+            <h1>GET API Data</h1>
+            <form action="/api/GetAllMovies" method="GET">
+                <label for="dataInput">Show All Movies:</label>
+                <button type="submit">Go</button>
+            </form>
+
+            <h1>POST API Data</h1>
+            <form action="/api/AddMovie" method="POST">
+                <label for="dataInput">Add New Movie:</label>
+                <input type="text" id="dataInput" name="post" required>
+                <button type="submit">Add</button>
+            </form>
+
+            <h1>PUT API Data</h1>
+            <form action="/api/UpdateMovie" method="POST">
+                <label for="dataInput">Update Movie:</label>
+                <input type="text" id="dataInput" name="put" required>
+                <button type="submit">Update</button>
+            </form>
+
+            <h1>DELETE API Data</h1>
+            <form action="/api/DeleteMovie" method="POST">
+                <label for="dataInput">Delete Movie:</label>
+                <input type="text" id="dataInput" name="delete" required>
+                <button type="submit">Delete</button>
+            </form>
+
+            <h1>Search API Data</h1>
+            <form action="/api/Search" method="POST">
+                <input type="text" id="dataInput" placeholder="Search movies..." name="search" required>
+                <button type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
